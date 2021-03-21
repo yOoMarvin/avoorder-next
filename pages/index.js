@@ -1,3 +1,5 @@
+// Mid-stage app for structural reference. No backend connection
+
 import React, { useState } from 'react'
 
 export default function Home () {

@@ -1,3 +1,5 @@
+// Complete app for demo and reference purpose
+
 import React, { useState } from 'react'
 import fire from '../config/fire-config'
 

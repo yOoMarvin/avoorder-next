@@ -1,3 +1,4 @@
+// blank app for workshop purpose
 
 export default function Home () {
   return (

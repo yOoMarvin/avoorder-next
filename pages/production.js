@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import fire from '../config/fire-config'
 
 export default function Home () {
   const [quantity, setQuantity] = useState(1)
@@ -8,7 +9,14 @@ export default function Home () {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-
+    fire.firestore()
+      .collection('orders')
+      .add({
+        quantity: quantity,
+        salt: salt,
+        pepper: pepper,
+        createdAt: Date()
+      })
     setQuantity(1)
     setSalt(false)
     setPepper(false)
